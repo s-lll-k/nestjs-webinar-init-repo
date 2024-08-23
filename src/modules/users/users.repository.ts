@@ -14,4 +14,8 @@ export class UsersRepository {
 
     return result;
   }
+
+  findByEmail(email: string) {
+    return this.usersOrmRepository.findOneBy({ email });
+  }
 }
