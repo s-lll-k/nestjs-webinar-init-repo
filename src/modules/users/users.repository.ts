@@ -14,6 +14,4 @@ export class UsersRepository {
 
     return result;
   }
-
-  async getAll() {}
 }

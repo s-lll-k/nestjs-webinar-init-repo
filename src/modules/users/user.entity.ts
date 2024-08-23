@@ -13,5 +13,5 @@ export class User extends BaseEntity {
   age: number;
 
   @Column()
-  password: string;
+  passwordHash: string;
 }
