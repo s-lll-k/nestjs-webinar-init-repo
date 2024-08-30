@@ -18,4 +18,8 @@ export class UsersRepository {
   findByEmail(email: string) {
     return this.usersOrmRepository.findOneBy({ email });
   }
+
+  findById(id: number) {
+    return this.usersOrmRepository.findOneBy({ id });
+  }
 }
