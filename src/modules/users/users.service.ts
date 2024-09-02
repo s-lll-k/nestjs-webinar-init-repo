@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
 import { UsersRepository } from './users.repository';
 import { RegisterUserDto } from './dto/register-user.dto';
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
@@ -18,5 +18,9 @@ export class UsersService {
     const createdUser = await this.usersRepository.save(user);
 
     return createdUser.id;
+  }
+
+  getAllUsers() {
+    return this.usersRepository.findAll();
   }
 }

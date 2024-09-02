@@ -28,4 +28,8 @@ export class UsersRepository {
 
     return result;
   }
+
+  findAll() {
+    return this.usersOrmRepository.find();
+  }
 }
